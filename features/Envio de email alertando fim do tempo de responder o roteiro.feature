@@ -12,3 +12,10 @@ And: O aluno “Charles Gabriel” faz parte da turma “Informática Teórica�
 And: “Charles Gabriel” ainda não concluiu o roteiro
 Then: “Charles Gabriel” receberá um email sobre o roteiro 
 And: O email contém informações relembrando “Charles Gabriel” da data de entrega.
+
+Scenario: prazo do roteiro perdido
+Given: O prazo do roteiro lançado na turma de “Informática Teórica” se expirou 
+And: O aluno “Charles Gabriel” faz parte da turma “Informática Teórica”
+And: “Charles Gabriel” não concluiu o roteiro
+Then: “Charles Gabriel” receberá um email sobre o roteiro 
+And: O email informa sobre o prazo perdido.
